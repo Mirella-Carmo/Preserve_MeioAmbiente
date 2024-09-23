@@ -3,19 +3,20 @@
 *{
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Oswald', sans-serif;
+    background-color: rgb(237, 237, 237);
 }
 
 /*imagem e frases de fundo (home)*/
-
 .home img {
     width: 100%;
     height: 600px;
     filter: brightness(50%);
+    z-index: 0;
 }
 
 .home h1 {
@@ -59,6 +60,7 @@ body {
 .menu_nav .logo h1 {
     color: rgb(255, 94, 0);
     font-size: 25;
+    font-weight: 400;
 }
 
 .menu_nav .logo img {
@@ -66,21 +68,580 @@ body {
     height: auto;
 }
 
-.menu_nav ul {
+.menu_nav .nav ul {
     padding-left: 300px;
 }
-.menu_nav ul li{
+.menu_nav .nav ul li{
     display: inline-block; /*alinhas na horizontal*/
     padding-left: 40px;
 }
 
-.menu_nav ul li a {
+.menu_nav .nav ul li a {
     color: rgb(255, 228, 92);
     text-decoration: none;
     font-size: 30px;
     font-weight: 400;
 }
 
-.menu_nav li a:hover {
+.menu_nav .nav li a:hover {
     color: rgb(255, 94, 0);
+}
+
+/*container - causas*/
+
+section .container {
+    margin-left: 50px;
+    height: auto;
+    width: 60%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.container h1 {
+    color: rgb(192, 0, 0);
+    font-size: 50px;
+    padding-top: 30px;
+    padding-left: 50px;
+}
+
+.container p {
+    padding: 30px 50px 30px 50px;
+    font-size: 25px;
+    color: rgb(34, 34, 34);
+    font-weight: 350;
+}
+
+
+/*imagens a direita (causa)*/
+
+section .fotos {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: end;
+    margin-right: 30px;
+    position: relative;
+    bottom: 1230px;
+}
+
+section .fotos img {
+    width: 500px;
+    height: 700px;
+    object-fit: cover;
+    height: auto;
+    border-radius: 10px;
+}
+
+/*Container Consequências */
+
+.consequencia {
+    position: relative;
+    margin-top: -1000px;
+}
+.second_container {
+    margin-left: 35px;
+    height: auto;
+    width: 95%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.second_container h1 {
+    color: rgb(192, 0, 0);
+    font-size: 50px;
+    padding-top: 30px;
+    padding-left: 50px;
+}
+
+.second_container p {
+    padding: 30px 50px 10px 50px;
+    font-size: 25px;
+    color: rgb(34, 34, 34);
+    font-weight: 350;
+}
+
+.rede_eletrica {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.rede_eletrica img {
+    width: 5000px;
+    height: auto;
+    position: relative;
+    margin-bottom: 50px;
+    margin-right: 30px;
+    border-radius: 20px;
+}
+
+/*Container prevenção*/
+
+.third_container {
+    margin-left: 50px;
+    height: auto;
+    width: 60%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin-top: 100px;
+}
+
+.third_container h1 {
+    color: rgb(192, 0, 0);
+    font-size: 50px;
+    padding-top: 30px;
+    padding-left: 50px;
+}
+
+.third_container p {
+    padding: 30px 50px 10px 50px;
+    font-size: 25px;
+    color: rgb(34, 34, 34);
+    font-weight: 350;
+}
+
+.third_container h5 {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(202, 5, 5);
+    padding: 30px 50px 30px;
+}
+
+.third_container a {
+    font-size: 20px;
+    font-weight: 300;
+    color: rgb(202, 5, 5);
+    padding: 0px 50px 30px;
+}
+
+section .imagem {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: end;
+    margin-top: -800px;
+}
+
+section .imagem img {
+    width: 400px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 70px;
+}
+
+/*Galeria de Imagem ANTES E DEPOIS*/
+
+.galeria_fotos {
+    margin-top: 80px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: white;
+    border-radius: 10px;
+    height: auto;
+    padding: 50px;
+}
+
+.galeria_fotos h1 {
+    text-align: center;
+    color: rgb(192, 0, 0);
+    font-size: 50px;
+    margin-bottom: 40px;
+    padding-top: 30px;
+}
+.galeria_fotos .container_um {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.container_um img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.container_um .first {
+    position: relative;
+    transition: opacity 0.5s ease;
+}
+
+.container_um .first::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/depois_1.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 2;
+    border-radius: 20px;
+}
+
+.container_um .first:hover::after {
+    opacity: 1;
+}
+
+/*segunda img*/
+
+.container_um .second {
+    position: relative;
+    transition: opacity 0.5s ease;
+}
+
+.container_um .second::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/depois2.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 2;
+    border-radius: 20px;
+}
+
+.container_um .second:hover::after {
+    opacity: 1;
+}
+
+/*terceira img*/
+
+.container_um .third {
+    position: relative;
+    transition: opacity 0.5s ease;
+}
+
+.container_um .third::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/depois3.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 2;
+    border-radius: 20px;
+}
+
+.container_um .third:hover::after {
+    opacity: 1;
+}
+
+/*Formulário de Contato*/
+.formulario {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+    background-color: white;
+}
+
+.formulario .dados h1 {
+    font-size: 50px;
+    color: rgb(192, 0, 0);
+    padding: 20px 0px 20px 20px;
+}
+
+.formulario .dados {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px 30px 0px 30px;
+}
+
+.formulario .dados input {
+    background-color: rgb(213, 213, 213);
+    font-size: 20px;
+    color: rgb(81, 81, 81);
+    border-radius: 10px;
+    padding-left: 20px;
+    border-color: none;
+    border: none;
+}
+
+.formulario .email input{ 
+    width: 40%;
+    height: 50px;
+}
+
+.formulario .texto input {
+    width: 70%;
+    height: 300px;
+    padding-bottom: 220px;
+}
+
+.formulario button {
+    width: 8%;
+    height: 50px;
+    font-size: 20px;
+    background-color: rgb(192, 0, 0);
+    color: white;
+    border: none;
+    font-weight: 300;
+    border-radius: 10px;
+}
+
+.formulario .redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 800px 50px 20px;
+}
+
+.formulario .redes img{
+    width: 50px;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: green;
+}
+
+
+/*segunda galeria de imagens - impactos*/
+
+.second_galeria {
+    margin-left: 50px;
+    margin-top: 100px;
+    margin-right: 50px;
+}
+
+.second_galeria h1 {
+    text-align: center;
+    color: rgb(192, 0, 0);
+    font-size: 50px;
+}
+
+.second_galeria .photos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.second_galeria .photos img {
+    width: 350px;
+    height: 300px;
+}
+
+/*rodapé*/
+
+.footer {
+    background-color: rgb(192, 0, 0);
+    margin-top: 100px;
+    width: 100%;
+    height: auto;
+}
+
+.footer .topicos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    padding: 15px 200px 15px 200px;
+    font-size: 10px;
+}
+
+.topicos .denuncia p {
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+
+.topicos .referencia a {
+    color: rgb(255, 255, 255);
+    position: relative;
+    top: 20px;
+    font-size: 15px;
+}
+
+.topicos .dev a {
+    font-size: 15px;
+    color: white;
+    position: relative;
+    top: 10px;
+}
+
+.topicos .dev img {
+    width: 50px;
+    height: auto;
+    position: relative;
+    top: 20px;
+}
+
+/*visualização mobile*/
+
+@media screen and (max-width: 1300px) {
+
+
+    /*menu de navegação*/
+
+    .menu_nav .nav{
+        display: none;
+    }
+
+    /*imagem e descrição principal (home)*/
+
+    .home img {
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+        filter: brightness(40%);
+    }
+
+    .home h1 {
+        text-align: center;
+    }
+
+    .home p {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .menu_nav {
+        background-color: rgb(177, 0, 0);
+
+    }
+
+    .menu_nav .logo h1{
+        color: white;
+        font-size: 30px;
+        text-align: center;
+
+    }
+
+    .menu_nav .logo img {
+        display: none;
+    }
+/*causa*/
+    section .container {
+        margin-left: 18px;
+        height: auto;
+        width: 90%;
+        margin-top: -200px;
+}
+section .fotos {
+    display: none;
+}
+
+/*consequencia*/
+.consequencia {
+    position: relative;
+    margin-top: 50px;
+}
+.second_container {
+    margin-left: 18px;
+    width: 90%;
+}
+.second_container h1 {
+    padding: 30px 20px 0px 20px;
+}
+.rede_eletrica img {
+    display: none;
+}
+
+/*prevenir*/
+.third_container {
+    margin-left: 18px;
+    width: 90%;
+    margin-top: 100px;
+}
+
+section .imagem {
+    margin-left: 18px;
+    margin-top: 80px;
+    align-items: start;
+}
+
+section .imagem img {
+    width: 350px;
+}
+
+.galeria_fotos { /*essa dv foi retirada devido a dificuldade de visualizar o efeito no dispositivo mobile*/
+    display: none;
+}
+
+/*formulario*/
+.formulario {
+    margin-left: 18px;
+    width: 90%;
+}
+
+.formulario .dados h1 {
+    font-size: 35px;
+}
+
+.formulario .email input{ 
+    width: 300px;
+}
+
+.formulario .texto input {
+    width: 300px;
+}
+
+.formulario button {
+    width: 30%;
+}
+
+.formulario .redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+
+}
+
+.formulario .redes img{
+    width: 50px;
+}
+
+/*segunda galeria - impactos fauna e flora*/
+
+.second_galeria {
+    margin-left: 18px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.second_galeria h1 {
+    font-size: 35px;
+}
+
+.second_galeria .photos {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.second_galeria .photos img {
+    width: 300px;
+    height: 250px;
+}
+
+/*foi preciso retirar o rodapé para não afetar o layout*/
+
+.footer{
+    display: none;
+}
+
 }
