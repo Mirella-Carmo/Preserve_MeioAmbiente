@@ -5,7 +5,7 @@
 Seguindo os critérios da avaliação, esse site é responsivo (adaptado para visualização em mais dispositivos), tem acessibilidade e navegabilidade intuitiva,
 com muitos recursos gráficos.</p>
 
-<h1>Documentação</h1>
+<h2>Documentação</h2>
 
 <p>
   
